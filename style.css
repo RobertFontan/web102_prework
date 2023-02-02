@@ -39,7 +39,7 @@ body {
     text-align: center;
 }
 
-#num-contributions, #total-raised, #num-games {
+#num-contributions, #total-raised, #num-games, #current-games {
     font-size: 50px;
 }
 

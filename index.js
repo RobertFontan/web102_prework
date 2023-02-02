@@ -24,6 +24,10 @@ function deleteChildElements(parent) {
 
 // grab the element with the id games-container
 const gamesContainer = document.getElementById("games-container");
+
+var currentGameNum = gamesContainer.childElementCount
+const currentGameCard = document.getElementById("current-games")
+currentGameCard.innerHTML = `<p>${currentGameNum}</p>`
 // create a function that adds all data from the games array to the page
 function addGamesToPage(games) {
     console.log(games)
@@ -37,8 +41,10 @@ function addGamesToPage(games) {
         newGame.innerHTML = display
         gamesContainer.append(newGame)
     });
-
-
+    
+    var currentGameNum = gamesContainer.childElementCount
+    const currentGameCard = document.getElementById("current-games")
+    currentGameCard.innerHTML = `<p>${currentGameNum}</p>`
     // loop over each item in the data
 
 
@@ -93,6 +99,8 @@ raisedCard.innerHTML = `<p>$${totalPledged.toLocaleString()}</p>`
 // grab number of games card and set its inner HTML
 const gamesCard = document.getElementById("num-games");
 gamesCard.innerHTML = `<p>${GAMES_JSON.length}</p>`
+
+
 
 /*************************************************************************************
  * Challenge 5: Add functions to filter the funded and unfunded games
